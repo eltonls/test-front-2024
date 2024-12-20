@@ -1,0 +1,15 @@
+{
+  "usuarios": [
+    {
+      "nome": "João",
+      "matricula": "5601020",
+      "idade": 24,
+      "cargo": "Aluno",
+      "tipo": 2
+    }
+  ],
+  "login": [
+    { "id": 1, "usuario": "admin", "senha": "1234", "tipo": 1 },
+    { "id": 2, "usuario": "comum", "senha": "5678", "tipo": 2 }
+  ]
+}
