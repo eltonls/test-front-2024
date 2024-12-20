@@ -149,12 +149,13 @@ Você deve criar uma aplicação de **Gerenciamento de Usuários** com as seguin
 ---
 
 ## Prazo de Entrega
-O teste deve ser entregue em **3 a 4 dias úteis**.
+O teste deve ser entregue até **terça-feira (24/12), ao meio dia**.
 
 ---
 
 ## Entrega
-Envie o projeto em um repositório no GitHub contendo:
+Envie o projeto em um repositório público no GitHub contendo:
 - O código-fonte completo.
 - Um arquivo `README.md` com instruções para execução.
+- 
 
