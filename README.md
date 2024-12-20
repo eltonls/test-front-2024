@@ -154,6 +154,6 @@ O teste deve ser entregue até **terça-feira (24/12), ao meio dia**.
 ---
 
 ## Entrega
-Envie o projeto em um repositório público no GitHub contendo:
+Envie o projeto em um repositório público no GitHub para o email contato@goatsd.com contendo:
 - O código-fonte completo.
 - Um arquivo `README.md` com instruções para execução.
