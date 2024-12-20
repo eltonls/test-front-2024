@@ -157,5 +157,3 @@ O teste deve ser entregue até **terça-feira (24/12), ao meio dia**.
 Envie o projeto em um repositório público no GitHub contendo:
 - O código-fonte completo.
 - Um arquivo `README.md` com instruções para execução.
-- 
-
