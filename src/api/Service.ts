@@ -7,9 +7,7 @@ export class Service {
 
   static async getUsuarios() {
     const res = await this.api.get("/usuarios");
-  
-    console.log(res);
-  
+    
     return res.data;
   }
 
