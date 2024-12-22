@@ -1,12 +1,52 @@
 {
   "usuarios": [
     {
+      "nome": "João Carmo de Melo",
+      "matricula": "5601020",
+      "idade": 24,
+      "cargo": "Aluno",
+      "tipo": 2,
+      "id": "a339"
+    },
+        {
       "nome": "João",
       "matricula": "5601020",
       "idade": 24,
       "cargo": "Aluno",
       "tipo": 2,
       "id": "a339"
+    },
+    {
+      "nome": "Maria",
+      "matricula": "5601021",
+      "idade": 22,
+      "cargo": "Aluno",
+      "tipo": 2,
+      "id": "b445"
+    },
+    {
+      "nome": "Pedro",
+      "matricula": "5601022",
+      "idade": 45,
+      "cargo": "Professor",
+      "tipo": 2,
+      "id": "c556"
+    },
+    {
+      "nome": "Ana",
+      "matricula": "5601023",
+      "idade": 35,
+      "cargo": "Coordenador",
+      "tipo": 1,
+      "id": "d667"
+    },
+    {
+      "nome": "Carlos",
+      "matricula": "5601024",
+      "idade": 28,
+      "cargo": "Aluno",
+      "tipo": 2,
+      "id": "e778"
     }
   ],
   "login": [
