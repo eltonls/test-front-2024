@@ -1,5 +1,3 @@
-
-
 class Usuario {
   private nome: string;
   private matricula: string;
