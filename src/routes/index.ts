@@ -8,15 +8,18 @@ const router = createRouter({
   routes: [
     {
       path: "/login",
-      component: Login
+      component: Login,
+      meta: { hasNavbar: false }
     },
     {
       path: "/users",
-      component: UserList
+      component: UserList,
+      meta: { hasNavbar: true }
     },
     {
       path: "/users/addUser",
-      component: AddUser
+      component: AddUser,
+      meta: { hasNavbar: true }
     }
   ]
 })

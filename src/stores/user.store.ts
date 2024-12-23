@@ -15,8 +15,11 @@ export const UserStore = defineStore("user", {
     }
   },
   actions: {
-    saveUser(user: UserInfo) {
+    saveUser(user: UserInfo): void {
       this.user = user;
+    },
+    removeUser(): void {
+      this.user = null;
     }
   }
 })
