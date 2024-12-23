@@ -1,14 +1,6 @@
 {
   "usuarios": [
     {
-      "nome": "João Carmo de Melo",
-      "matricula": "5601020",
-      "idade": 24,
-      "cargo": "Aluno",
-      "tipo": 2,
-      "id": "a339"
-    },
-    {
       "nome": "João",
       "matricula": "5601020",
       "idade": 24,
