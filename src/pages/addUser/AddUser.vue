@@ -12,10 +12,10 @@
         <v-btn variant="outlined">Cancelar</v-btn>
         <v-btn color="blue" type="submit">Criar</v-btn>
       </div>
-      <v-alert class="position-fixed top-0 right-0" location="top end" v-model="isFailAlertShown" elevation="10"
+      <v-alert class="position-fixed top-0 right-0 mt-16" location="top end" v-model="isFailAlertShown" elevation="10"
         density="comfortable" color="error" title="Matrícula já existe" text="Matrícula já foi adicionada a o sistema"
         closable></v-alert>
-      <v-alert class="position-fixed top-0 right-0" location="top end" v-model="isSuccessAlertShown" elevation="10"
+      <v-alert class="position-fixed top-0 right-0 mt-16" location="top end" v-model="isSuccessAlertShown" elevation="10"
         density="comfortable" color="sucess" title="Usuário Criado!" text="Usuário adicionado com sucesso"
         closable></v-alert>
     </v-form>
@@ -23,12 +23,15 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import { isIdadeValid, isMatriculaValid, isNameValid } from '../../utils/validators.util';
 import { VForm } from 'vuetify/components/VForm';
 import Usuario from '../../models/user.model';
 import { Service } from '../../api/Service';
+import { UserStore } from '../../stores/user.store';
+import router from '../../routes';
 
+const userStore = UserStore();
 const nome = ref<string>("");
 const matricula = ref<string>("");
 const idade = ref<number>(0);
@@ -76,6 +79,7 @@ function createUser(): void {
     Service.createUsuario(novoUsuario)
       .then(() => {
         isSuccessAlertShown.value = true;
+        router.push("/users");
 
         setTimeout(() => {
           isSuccessAlertShown.value = false;
@@ -90,5 +94,16 @@ function createUser(): void {
       })
   }
 }
+
+
+onMounted(() => {
+  if (!userStore.user) {
+    router.push("/login")
+  }
+
+  if(userStore.user && userStore.user.tipo !== 1) {
+    router.push("/users")
+  }
+})
 
 </script>
