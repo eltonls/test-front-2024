@@ -10,8 +10,8 @@ export class Service {
   static async getUsuarios(queryParams: QueryParams) {
     let link = "/usuarios";
 
-    const res = await this.api.get(link, { params: {...queryParams, idadeRange: undefined } });
-    
+    const res = await this.api.get(link, { params: {...queryParams } });
+
     return res.data;
   }
 

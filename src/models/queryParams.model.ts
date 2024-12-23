@@ -6,8 +6,8 @@ class QueryParams {
     public idade_lte?: number,
     public cargo?: string,
     public tipo?: number,
-    public size?: number,
-    public page?: number
+    public _limit?: number,
+    public _page?: number
   ) {}
 }
 

@@ -9,12 +9,12 @@
       @applyFilters="getUsuarios" @clearFilters="clearFilters" @setAgeFilters="setAgeFilters" />
     <v-row dense>
       <v-col>
-        <v-data-table-server :items="users" v-model:items-per-page="itemsPerPage" :headers="headers"
-          :items-length="itemsTotal" custom>
+        <v-data-table :items="users" v-model:items-per-page="itemsPerPage" :headers="headers"
+           :items-length="itemsTotal" :page="actualPage" custom items-per-page-text="Usuários por Página">
           <template v-slot:[`item.tipo`]="{ item }">
             <p>{{ item.tipo == 1 ? "Admin" : "Comum" }}</p>
           </template>
-        </v-data-table-server>
+        </v-data-table>
       </v-col>
     </v-row>
   </v-container>
@@ -41,6 +41,7 @@ const headers = [
 
 const itemsPerPage = ref(5);
 const itemsTotal = ref(0);
+const actualPage = ref(1);
 const users = ref([] as Array<Usuario>);
 const queryParams = ref(new QueryParams())
 const isFilterShown = ref(false);
@@ -69,7 +70,7 @@ function clearFilters() {
 }
 
 function getUsuarios() {
-  Service.getUsuarios(queryParams.value)
+  Service.getUsuarios({ ...queryParams.value })
     .then((data) => {
       users.value = data;
       itemsTotal.value = data.length;
@@ -78,9 +79,9 @@ function getUsuarios() {
 
 onMounted(() => {
   // Redirect if can't find a user
-  if(!userStore.user) {
+  /* if(!userStore.user) {
     router.push("/login");
-  }
+  } */
 
   getUsuarios();
 })
