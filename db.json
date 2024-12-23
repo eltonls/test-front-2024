@@ -91,6 +91,34 @@
       "idade": "26",
       "cargo": "Gerente",
       "tipo": 1
+    },
+    {
+      "nome": "Testando",
+      "matricula": "1234533",
+      "idade": "25",
+      "cargo": "Desenvolvedor",
+      "tipo": 2
+    },
+    {
+      "nome": "Teste",
+      "matricula": "1234566",
+      "idade": "24",
+      "cargo": "Analista",
+      "tipo": 1
+    },
+    {
+      "nome": "teste",
+      "matricula": "3264153",
+      "idade": "27",
+      "cargo": "Gerente",
+      "tipo": 1
+    },
+    {
+      "nome": "TElel",
+      "matricula": "2312132",
+      "idade": "25",
+      "cargo": "Professor",
+      "tipo": 1
     }
   ],
   "login": [

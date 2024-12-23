@@ -3,6 +3,7 @@
     <div class="d-flex ga-5">
       <h2>Usuários</h2>
       <v-btn @click="toggleFilterDrawer" append-icon="mdi-filter">Filtrar</v-btn>
+      <v-btn to="/users/addUser" v-if="isUserAdmin()">Criar Usuário</v-btn>
     </div>
     <FilterDrawer :query-params="queryParams" :is-filter-drawer-open="isFilterShown" @filterToggle="toggleFilterDrawer"
       @applyFilters="getUsuarios" @clearFilters="clearFilters" @setAgeFilters="setAgeFilters" />
@@ -25,6 +26,10 @@ import Usuario from '../../models/user.model';
 import { Service } from '../../api/Service';
 import QueryParams from '../../models/queryParams.model';
 import FilterDrawer from './components/FilterDrawer.vue';
+import { UserStore } from '../../stores/user.store';
+import router from '../../routes';
+
+const userStore = UserStore();
 
 const headers = [
   { title: 'Nome', key: 'nome', align: 'center' },
@@ -40,8 +45,16 @@ const users = ref([] as Array<Usuario>);
 const queryParams = ref(new QueryParams())
 const isFilterShown = ref(false);
 
-function toggleFilterDrawer() {
+function toggleFilterDrawer(): void {
   isFilterShown.value = !isFilterShown.value;
+}
+
+function isUserAdmin(): boolean {
+  if(userStore.user) {
+    return userStore.user.tipo === 1;
+  }
+
+  return false;
 }
 
 function setAgeFilters(idadeMin: number, idadeMax: number) {
@@ -64,6 +77,11 @@ function getUsuarios() {
 }
 
 onMounted(() => {
+  // Redirect if can't find a user
+  if(!userStore.user) {
+    router.push("/login");
+  }
+
   getUsuarios();
 })
 </script>

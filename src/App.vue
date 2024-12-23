@@ -2,7 +2,7 @@
   <div>
     <v-app>
       <Navbar v-if="route.meta.hasNavbar" />
-      <div class="pt-15">
+      <div :class="route.meta.hasNavbar ? 'mt-15' : ''">
         <RouterView />
       </div>
     </v-app>
