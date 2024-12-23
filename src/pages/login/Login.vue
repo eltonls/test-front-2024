@@ -15,8 +15,8 @@
             </v-btn>
           </v-form>
           <v-alert class="position-fixed top-0 right-0" location="top end" v-model="isAlertShown" elevation="10"
-            density="comfortable" color="error" title="Usuário não encontrado"
-            text="Usuário não encontrado ou servidor fora do ar, fale com seu administrador" closable></v-alert>
+            density="comfortable" color="error" title="Erro!"
+            text="Erro ao fazer login, tente novamente mais tarde" closable></v-alert>
         </v-col>
         <v-col class="col">
           <img src="/src/assets/login_img.jpg" class="img" alt="teste de reference">
@@ -31,6 +31,7 @@ import { ref } from 'vue';
 import { LoginService } from '../../api/login.service';
 import { UserStore } from '../../stores/user.store';
 import useAlert from '../../composables/alert.composable';
+import router from '../../routes';
 
 const { isAlertShown, showAlert, closeAlert } = useAlert();
 
@@ -42,6 +43,7 @@ function submitLogin() {
   LoginService.login(user.value, password.value)
     .then((data) => {
       userStore.saveUser(data);
+      router.push("/users");
     })
     .catch(() => {
       showAlert();
