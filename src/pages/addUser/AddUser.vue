@@ -29,6 +29,7 @@ import { VForm } from 'vuetify/components/VForm';
 import Usuario from '../../models/user.model';
 import { Service } from '../../api/Service';
 import { UserStore } from '../../stores/user.store';
+import { cargos, listaTipos } from '../../constants/selectOptions';
 import router from '../../routes';
 
 const userStore = UserStore();
@@ -40,24 +41,6 @@ const tipo = ref<number>(0);
 const form = ref<InstanceType<typeof VForm> | null>(null)
 const isFailAlertShown = ref<boolean>(false);
 const isSuccessAlertShown = ref<boolean>(false);
-
-const cargos = [
-  "Analista",
-  "Gerente",
-  "Desenvolvedor",
-  "Professor"
-]
-
-const listaTipos = [
-  {
-    title: "Administrador",
-    value: 1
-  },
-  {
-    title: "Comum",
-    value: 2
-  }
-]
 
 const regras = {
   required: (value: string) => !!value || "O campo é obrigatório",
