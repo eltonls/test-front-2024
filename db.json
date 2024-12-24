@@ -1,20 +1,12 @@
 {
   "usuarios": [
     {
-      "nome": "João",
+      "nome": "João Camargo",
       "matricula": "5601020",
       "idade": 24,
       "cargo": "Aluno",
       "tipo": 2,
       "id": "a339"
-    },
-    {
-      "nome": "Maria",
-      "matricula": "5601021",
-      "idade": 22,
-      "cargo": "Aluno",
-      "tipo": 2,
-      "id": "b445"
     },
     {
       "nome": "Pedro",
@@ -31,14 +23,6 @@
       "cargo": "Coordenador",
       "tipo": 1,
       "id": "d667"
-    },
-    {
-      "nome": "Carlos",
-      "matricula": "5601024",
-      "idade": 28,
-      "cargo": "Aluno",
-      "tipo": 2,
-      "id": "e778"
     },
     {
       "id": "4152",
@@ -71,13 +55,6 @@
       "tipo": 2
     },
     {
-      "nome": "DSDADSASDASD",
-      "matricula": "1234564",
-      "idade": "25",
-      "cargo": "Analista",
-      "tipo": 2
-    },
-    {
       "nome": "Elton",
       "matricula": "3265417",
       "idade": "26",
@@ -96,20 +73,6 @@
       "matricula": "1234566",
       "idade": "24",
       "cargo": "Analista",
-      "tipo": 1
-    },
-    {
-      "nome": "teste",
-      "matricula": "3264153",
-      "idade": "27",
-      "cargo": "Gerente",
-      "tipo": 1
-    },
-    {
-      "nome": "TElel",
-      "matricula": "2312132",
-      "idade": "25",
-      "cargo": "Professor",
       "tipo": 1
     }
   ],

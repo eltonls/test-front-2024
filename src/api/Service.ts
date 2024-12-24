@@ -21,9 +21,15 @@ export class Service {
     return res;
   }
 
-  static async updateUsuario(id: string, dados: any) {
+  static async updateUsuario(id: string, usuario: Usuario) {
+    const res = await this.api.put(`/usuarios/${id}`, usuario);
+
+    return res;
   }
 
   static async deleteUsuario(id: string) {
+    const res = await this.api.delete(`/usuarios/${id}`);
+
+    return res;
   }
 }
